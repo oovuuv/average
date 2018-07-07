@@ -5,16 +5,23 @@
   <title>평균 값 계산기</title>
 
   <script>
-    var value1 = prompt('첫번째 숫자를 입력해주세요.');
-    var value2 = prompt('두번째 숫자를 입력해주세요.');
+    var num = Number(prompt('평균 값을 구할 숫자의 개수를 입력해주세요.'));
+    //
+    var sum = 0;
+    var totalNumbers = Number(num);
 
-    var num1 = Number(value1);
-    var num2 = Number(value2);
+    for (var i = 1; i <= totalNumbers; i++) {
+      var value = prompt(i + '번 숫자를 입력해주세요.');
 
-    var avg = (num1 + num2) / 2;
+      sum += Number(value);
+    }
 
-    alert('평균: ' + avg);
+    var avg = sum / totalNumbers;
+
+    alert('평균 값 : ' + avg);
+
   </script>
+
 </head>
 
 <body>
